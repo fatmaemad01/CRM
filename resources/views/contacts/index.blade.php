@@ -1,11 +1,10 @@
 <x-main-layout title="Contacts">
     <div class="container m-3">
         <div class="col-lg-12 grid-margin stretch-card">
-            <div class="card">
+            <div class="card p-3">
                 <div class="card-body">
                     <div class="header d-flex justify-content-between">
-                        <h3 class="card-title">Contacts</h3>
-                        <td><a href="{{route('contacts.create')}}" class="btn btn-inverse-primary btn-fw">Create</a></i>
+                        <h3 class="card-title">Contacts </h3>
                     </div>
 
                     <div class="table-responsive">

@@ -27,7 +27,7 @@ class ContactRequest extends FormRequest
             'company' => 'nullable|string',
             'job_title' => 'nullable|string',
             'email' => 'nullable|string',
-            'phone' => 'required|string',
+            'phone' => 'required|string|max:10|min:10',
             'birthday' => 'nullable|date',
             'note' => 'nullable|string',
             'image' => 'nullable|image',

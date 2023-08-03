@@ -11,10 +11,16 @@ use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
-
-    public function index()
+    public function __construct()
     {
-        $contacts = Contact::orderBy('created_at')->get();
+        $this->middleware('auth');
+    }
+
+    public function index(Request $request)
+    {
+        $search = $request->query('search');
+
+        $contacts = Contact::search($search)->orderBy('created_at')->get();
         // $contacts = $user->contacts()->orderBy('created_at')->get();
         return view('contacts.index', compact('contacts'));
     }
